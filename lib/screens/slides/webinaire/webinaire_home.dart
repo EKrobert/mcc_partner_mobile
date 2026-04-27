@@ -70,12 +70,12 @@ class WebinaireHome extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text('Webinaire\nStratégique',
-                    style: GoogleFonts.cormorantGaramond(
+                    style: GoogleFonts.poppins(
                       fontSize: 38, fontWeight: FontWeight.w500,
                       color: Colors.white, height: 1.1,
                     )),
                   const SizedBox(height: 6),
-                  Text('10e anniversaire du partenariat Maroc–Chine',
+                  Text('10e anniversaire du partenariat Morocco - China',
                     style: GoogleFonts.poppins(
                       fontSize: 12, color: Colors.white.withOpacity(0.75),
                       fontWeight: FontWeight.w300,
@@ -226,7 +226,7 @@ class _WebinaireInscriptionState extends State<WebinaireInscriptionScreen> {
     padding: const EdgeInsets.all(20),
     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text('Webinaire du 11 Mai 2026',
-        style: GoogleFonts.cormorantGaramond(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
+        style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
       const SizedBox(height: 4),
       Text('Inscription gratuite — Confirmation par email',
         style: GoogleFonts.poppins(fontSize: 12, color: MCCColors.muted, fontWeight: FontWeight.w300)),
@@ -270,7 +270,7 @@ class _WebinaireInscriptionState extends State<WebinaireInscriptionScreen> {
         ),
         const SizedBox(height: 24),
         Text('Inscription Confirmée !',
-          style: GoogleFonts.cormorantGaramond(fontSize: 30, color: MCCColors.green, fontWeight: FontWeight.w500)),
+          style: GoogleFonts.poppins(fontSize: 30, color: MCCColors.green, fontWeight: FontWeight.w500)),
         const SizedBox(height: 12),
         Text('Vous recevrez vos informations de connexion par email avant le 11 Mai.',
           textAlign: TextAlign.center,
@@ -320,8 +320,8 @@ class WebinaireLiveScreen extends StatelessWidget {
               Icon(Icons.play_circle_fill, size: 72, color: MCCColors.red.withOpacity(0.8)),
               const SizedBox(height: 14),
               Text('Webinaire MCC Partners',
-                style: GoogleFonts.cormorantGaramond(fontSize: 22, color: Colors.white, fontWeight: FontWeight.w400)),
-              Text('10e anniversaire Maroc–Chine',
+                style: GoogleFonts.poppins(fontSize: 22, color: Colors.white, fontWeight: FontWeight.w400)),
+              Text('10e anniversaire Morocco - China',
                 style: GoogleFonts.poppins(fontSize: 12, color: Colors.white54, fontWeight: FontWeight.w300)),
             ]),
           ),
@@ -471,7 +471,7 @@ class _CountdownBox extends StatelessWidget {
       borderRadius: BorderRadius.circular(8),
     ),
     child: Column(children: [
-      Text(value, style: GoogleFonts.cormorantGaramond(fontSize: 30, color: Colors.white, fontWeight: FontWeight.w300)),
+      Text(value, style: GoogleFonts.poppins(fontSize: 30, color: Colors.white, fontWeight: FontWeight.w300)),
       Text(label, style: GoogleFonts.poppins(fontSize: 9, color: Colors.white70, letterSpacing: 1)),
     ]),
   );

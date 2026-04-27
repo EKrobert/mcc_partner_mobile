@@ -37,7 +37,7 @@ class _B2BHomeState extends State<B2BHome> with SingleTickerProviderStateMixin {
             decoration: BoxDecoration(color: MCCColors.goldDark, borderRadius: BorderRadius.circular(2))),
           const SizedBox(width: 10),
           Text('Mise en Relation B2B',
-            style: GoogleFonts.cormorantGaramond(
+            style: GoogleFonts.poppins(
               fontSize: 22, fontWeight: FontWeight.w500, color: MCCColors.ink,
             )),
         ]),
@@ -229,7 +229,7 @@ class CompanyDetailScreen extends StatelessWidget {
                   const SizedBox(width: 16),
                   Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(company.name,
-                      style: GoogleFonts.cormorantGaramond(fontSize: 22, color: MCCColors.ink, fontWeight: FontWeight.w500)),
+                      style: GoogleFonts.poppins(fontSize: 22, color: MCCColors.ink, fontWeight: FontWeight.w500)),
                     Text(company.sector,
                       style: GoogleFonts.poppins(fontSize: 12, color: accent, fontWeight: FontWeight.w500)),
                     if (company.standNumber != null)
@@ -681,7 +681,7 @@ class _BookRdvState extends State<BookRdvScreen> {
         ),
         const SizedBox(height: 24),
         Text('Rendez-vous Confirmé !',
-          style: GoogleFonts.cormorantGaramond(fontSize: 28, color: MCCColors.green, fontWeight: FontWeight.w500)),
+          style: GoogleFonts.poppins(fontSize: 28, color: MCCColors.green, fontWeight: FontWeight.w500)),
         const SizedBox(height: 12),
         Text('${widget.company.name}\n$_slot',
           textAlign: TextAlign.center,

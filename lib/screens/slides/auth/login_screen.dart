@@ -13,14 +13,16 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _isChinese = false;
-  bool _loading   = false;
+  bool _loading = false;
 
   Future<void> _login() async {
     setState(() => _loading = true);
     await Future.delayed(const Duration(milliseconds: 1200));
     if (mounted) {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => const MainNav()));
+        context,
+        MaterialPageRoute(builder: (_) => const MainNav()),
+      );
     }
   }
 
@@ -37,48 +39,34 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const SizedBox(height: 56),
               // Logo
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.baseline,
-                textBaseline: TextBaseline.alphabetic,
-                children: [
-                  Text('M',
-                    style: GoogleFonts.cormorantGaramond(
-                      fontSize: 60, fontWeight: FontWeight.w700,
-                      color: MCCColors.red, letterSpacing: -3, height: 1,
-                    )),
-                  Text('CC',
-                    style: GoogleFonts.cormorantGaramond(
-                      fontSize: 48, fontWeight: FontWeight.w300,
-                      color: MCCColors.ink, letterSpacing: -1, height: 1,
-                    )),
-                  const SizedBox(width: 10),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 6),
-                    child: Text('PARTNERS',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14, letterSpacing: 4,
-                        color: MCCColors.inkMid, fontWeight: FontWeight.w300,
-                      )),
-                  ),
-                ],
-              ),
+              Image.asset('assets/logo/mcc.png', width: 140, height: 140),
               const SizedBox(height: 6),
               // Tricolor bar
-              Row(children: [
-                Container(width: 20, height: 3, color: MCCColors.green),
-                Container(width: 20, height: 3, color: MCCColors.red),
-                Container(width: 20, height: 3, color: MCCColors.yellow),
-              ]),
+              Row(
+                children: [
+                  Container(width: 20, height: 3, color: MCCColors.green),
+                  Container(width: 20, height: 3, color: MCCColors.red),
+                  Container(width: 20, height: 3, color: MCCColors.yellow),
+                ],
+              ),
               const SizedBox(height: 48),
-              Text('Connexion',
-                style: GoogleFonts.cormorantGaramond(
-                  fontSize: 34, fontWeight: FontWeight.w500, color: MCCColors.ink,
-                )),
-              const SizedBox(height: 4),
-              Text('Accédez à votre espace MCC Partners',
+              Text(
+                'Connexion',
                 style: GoogleFonts.poppins(
-                  fontSize: 13, color: MCCColors.muted, fontWeight: FontWeight.w300,
-                )),
+                  fontSize: 34,
+                  fontWeight: FontWeight.w500,
+                  color: MCCColors.ink,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Accédez à votre espace MCC Partners',
+                style: GoogleFonts.poppins(
+                  fontSize: 13,
+                  color: MCCColors.muted,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
               const SizedBox(height: 32),
 
               // Toggle Marocain / Chinois
@@ -91,13 +79,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Row(
                   children: [
                     _ProfileToggle(
-                      flag: '🇲🇦', label: 'Marocain',
+                      flag: '🇲🇦',
+                      label: 'Marocain',
                       selected: !_isChinese,
                       color: MCCColors.green,
                       onTap: () => setState(() => _isChinese = false),
                     ),
                     _ProfileToggle(
-                      flag: '🇨🇳', label: 'Chinois',
+                      flag: '🇨🇳',
+                      label: 'Chinois',
                       selected: _isChinese,
                       color: MCCColors.red,
                       onTap: () => setState(() => _isChinese = true),
@@ -110,16 +100,24 @@ class _LoginScreenState extends State<LoginScreen> {
               // Fields
               const MCCTextField(label: 'Email', hint: 'votre@email.com'),
               const SizedBox(height: 16),
-              const MCCTextField(label: 'Mot de passe', hint: '••••••••', obscureText: true),
+              const MCCTextField(
+                label: 'Mot de passe',
+                hint: '••••••••',
+                obscureText: true,
+              ),
               const SizedBox(height: 8),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {},
-                  child: Text('Mot de passe oublié ?',
+                  child: Text(
+                    'Mot de passe oublié ?',
                     style: GoogleFonts.poppins(
-                      fontSize: 12, color: accent, fontWeight: FontWeight.w400,
-                    )),
+                      fontSize: 12,
+                      color: accent,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 24),
@@ -134,46 +132,66 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor: accent,
                     foregroundColor: MCCColors.white,
                     elevation: 0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     disabledBackgroundColor: accent.withOpacity(0.5),
                   ),
                   child: _loading
                       ? const SizedBox(
-                          width: 22, height: 22,
+                          width: 22,
+                          height: 22,
                           child: CircularProgressIndicator(
-                            color: Colors.white, strokeWidth: 2.5),
+                            color: Colors.white,
+                            strokeWidth: 2.5,
+                          ),
                         )
-                      : Text('Se connecter',
+                      : Text(
+                          'Se connecter',
                           style: GoogleFonts.poppins(
-                            fontSize: 15, fontWeight: FontWeight.w600,
-                          )),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                 ),
               ),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Pas encore de compte ? ",
-                    style: GoogleFonts.poppins(fontSize: 13, color: MCCColors.muted)),
+                  Text(
+                    "Pas encore de compte ? ",
+                    style: GoogleFonts.poppins(
+                      fontSize: 13,
+                      color: MCCColors.muted,
+                    ),
+                  ),
                   GestureDetector(
                     onTap: () => Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (_) => const RegisterScreen()),
                     ),
-                    child: Text('S\'inscrire',
+                    child: Text(
+                      'S\'inscrire',
                       style: GoogleFonts.poppins(
-                        fontSize: 13, color: accent, fontWeight: FontWeight.w600,
+                        fontSize: 13,
+                        color: accent,
+                        fontWeight: FontWeight.w600,
                         decoration: TextDecoration.underline,
-                      )),
+                      ),
+                    ),
                   ),
                 ],
               ),
               const SizedBox(height: 60),
               Center(
-                child: Text('🇲🇦  ✦  🇨🇳',
+                child: Text(
+                  '🇲🇦  ✦  🇨🇳',
                   style: TextStyle(
-                    fontSize: 22, color: MCCColors.muted.withOpacity(0.4),
-                  )),
+                    fontSize: 22,
+                    color: MCCColors.muted.withOpacity(0.4),
+                  ),
+                ),
               ),
               const SizedBox(height: 32),
             ],
@@ -191,8 +209,11 @@ class _ProfileToggle extends StatelessWidget {
   final VoidCallback onTap;
 
   const _ProfileToggle({
-    required this.flag, required this.label,
-    required this.selected, required this.color, required this.onTap,
+    required this.flag,
+    required this.label,
+    required this.selected,
+    required this.color,
+    required this.onTap,
   });
 
   @override
@@ -214,12 +235,14 @@ class _ProfileToggle extends StatelessWidget {
             children: [
               Text(flag, style: const TextStyle(fontSize: 18)),
               const SizedBox(width: 8),
-              Text(label,
+              Text(
+                label,
                 style: GoogleFonts.poppins(
                   fontSize: 13,
                   color: selected ? color : MCCColors.muted,
                   fontWeight: selected ? FontWeight.w600 : FontWeight.w300,
-                )),
+                ),
+              ),
             ],
           ),
         ),

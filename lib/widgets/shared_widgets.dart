@@ -42,7 +42,7 @@ class MCCAppBar extends StatelessWidget implements PreferredSizeWidget {
             const SizedBox(width: 10),
           ],
           Text(title,
-            style: GoogleFonts.cormorantGaramond(
+            style: GoogleFonts.poppins(
               fontSize: 22, fontWeight: FontWeight.w500,
               color: MCCColors.ink, letterSpacing: 0.3,
             )),

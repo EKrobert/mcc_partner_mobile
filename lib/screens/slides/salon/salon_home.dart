@@ -55,7 +55,7 @@ class SalonHome extends StatelessWidget {
                   ),
                   const SizedBox(height: 14),
                   Text('Salon Maroc\nChina Connect',
-                    style: GoogleFonts.cormorantGaramond(
+                    style: GoogleFonts.poppins(
                       fontSize: 34, fontWeight: FontWeight.w500, color: Colors.white, height: 1.1,
                     )),
                   const SizedBox(height: 8),
@@ -147,7 +147,7 @@ class _RouteCard extends StatelessWidget {
                 )),
               const SizedBox(height: 4),
               Text(title,
-                style: GoogleFonts.cormorantGaramond(
+                style: GoogleFonts.poppins(
                   fontSize: 20, color: MCCColors.ink, fontWeight: FontWeight.w500,
                 )),
               Text(subtitle,
@@ -243,7 +243,7 @@ class _SalonChinoisState extends State<SalonChinoisScreen> {
       FlagBadge(flag: '🇨🇳', label: 'Entreprises Chinoises', color: MCCColors.red),
       const SizedBox(height: 16),
       Text('Choisissez votre stand',
-        style: GoogleFonts.cormorantGaramond(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
+        style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
       const SizedBox(height: 20),
       ..._stands.asMap().entries.map((e) {
         final i = e.key; final s = e.value;
@@ -277,7 +277,7 @@ class _SalonChinoisState extends State<SalonChinoisScreen> {
                   ]),
                 ),
                 Text(s.price,
-                  style: GoogleFonts.cormorantGaramond(
+                  style: GoogleFonts.poppins(
                     fontSize: 24, color: sel ? s.color : MCCColors.muted, fontWeight: FontWeight.w400,
                   )),
               ],
@@ -302,7 +302,7 @@ class _SalonChinoisState extends State<SalonChinoisScreen> {
       FlagBadge(flag: '🇨🇳', label: _stands[_selectedStand].name, color: MCCColors.red),
       const SizedBox(height: 16),
       Text('Vos coordonnées',
-        style: GoogleFonts.cormorantGaramond(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
+        style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
       const SizedBox(height: 20),
       MCCCard(
         padding: const EdgeInsets.all(20),
@@ -335,7 +335,7 @@ class _SalonChinoisState extends State<SalonChinoisScreen> {
       children: [
         _stepIndicator(),
         Text('Récapitulatif & Paiement',
-          style: GoogleFonts.cormorantGaramond(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
+          style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
         const SizedBox(height: 20),
         MCCCard(
           padding: const EdgeInsets.all(20),
@@ -393,7 +393,7 @@ class _SalonChinoisState extends State<SalonChinoisScreen> {
               ),
               const SizedBox(height: 14),
               Text('Réservation Confirmée !',
-                style: GoogleFonts.cormorantGaramond(fontSize: 24, color: MCCColors.green, fontWeight: FontWeight.w500)),
+                style: GoogleFonts.poppins(fontSize: 24, color: MCCColors.green, fontWeight: FontWeight.w500)),
               const SizedBox(height: 6),
               Text('Reçu n° MCC-2026-0042',
                 style: GoogleFonts.poppins(fontSize: 11, color: MCCColors.muted, letterSpacing: 1.5)),
@@ -464,7 +464,7 @@ class _SalonMarocainState extends State<SalonMarocainScreen> {
       FlagBadge(flag: '🇲🇦', label: 'Entreprises Marocaines', color: MCCColors.green),
       const SizedBox(height: 16),
       Text('Demande d\'Invitation',
-        style: GoogleFonts.cormorantGaramond(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
+        style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.w500, color: MCCColors.ink)),
       const SizedBox(height: 4),
       Text('Accès gratuit • Badge QR nominatif',
         style: GoogleFonts.poppins(fontSize: 12, color: MCCColors.green, fontWeight: FontWeight.w400)),
@@ -502,7 +502,7 @@ class _SalonMarocainState extends State<SalonMarocainScreen> {
     children: [
       const SizedBox(height: 16),
       Text('Votre Badge Officiel',
-        style: GoogleFonts.cormorantGaramond(fontSize: 28, color: MCCColors.green, fontWeight: FontWeight.w500)),
+        style: GoogleFonts.poppins(fontSize: 28, color: MCCColors.green, fontWeight: FontWeight.w500)),
       const SizedBox(height: 4),
       Text('Salon MCC Partners 2026',
         style: GoogleFonts.poppins(fontSize: 12, color: MCCColors.muted, letterSpacing: 1)),
@@ -517,8 +517,8 @@ class _SalonMarocainState extends State<SalonMarocainScreen> {
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text('M', style: GoogleFonts.cormorantGaramond(fontSize: 32, color: MCCColors.red, fontWeight: FontWeight.w700)),
-                  Text('CC', style: GoogleFonts.cormorantGaramond(fontSize: 26, color: MCCColors.ink, fontWeight: FontWeight.w300)),
+                  Text('M', style: GoogleFonts.poppins(fontSize: 32, color: MCCColors.red, fontWeight: FontWeight.w700)),
+                  Text('CC', style: GoogleFonts.poppins(fontSize: 26, color: MCCColors.ink, fontWeight: FontWeight.w300)),
                 ],
               ),
               const Text('🇲🇦', style: TextStyle(fontSize: 28)),
@@ -537,7 +537,7 @@ class _SalonMarocainState extends State<SalonMarocainScreen> {
             ),
             const SizedBox(height: 20),
             Text('Youssef Benali',
-              style: GoogleFonts.cormorantGaramond(fontSize: 24, color: MCCColors.ink, fontWeight: FontWeight.w500)),
+              style: GoogleFonts.poppins(fontSize: 24, color: MCCColors.ink, fontWeight: FontWeight.w500)),
             Text('AfrikHub Maroc',
               style: GoogleFonts.poppins(fontSize: 12, color: MCCColors.green, fontWeight: FontWeight.w500, letterSpacing: 0.5)),
             Text('Logistique & Commerce',

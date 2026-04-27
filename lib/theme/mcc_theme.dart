@@ -56,7 +56,7 @@ class MCCTheme {
       scrolledUnderElevation: 0,
       centerTitle:        false,
       surfaceTintColor:   Colors.transparent,
-      titleTextStyle: GoogleFonts.cormorantGaramond(
+      titleTextStyle: GoogleFonts.poppins(
         fontSize: 22, fontWeight: FontWeight.w500,
         color: MCCColors.ink, letterSpacing: 0.3,
       ),
